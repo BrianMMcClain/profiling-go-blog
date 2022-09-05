@@ -13,7 +13,7 @@ func MonteCarloPow(iterations int) float64 {
 	for i := 0; i < iterations; i++ {
 		x := randGen.Float64()
 		y := randGen.Float64()
-		hit := (math.Pow(x, 2) + math.Pow(y, 2)) < 1.0
+		hit := (math.Pow(x, 2) + math.Pow(y, 2)) <= 1.0
 		if hit {
 			hitCount++
 		}
@@ -29,7 +29,7 @@ func MonteCarloSquare(iterations int) float64 {
 	for i := 0; i < iterations; i++ {
 		x := randGen.Float64()
 		y := randGen.Float64()
-		hit := ((x * x) + (y * y)) < 1
+		hit := ((x * x) + (y * y)) <= 1
 		if hit {
 			hitCount++
 		}

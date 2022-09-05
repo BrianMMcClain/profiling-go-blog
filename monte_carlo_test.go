@@ -14,6 +14,7 @@ func TestMonteCarlo(t *testing.T) {
 func BenchmarkMonteCarlo(b *testing.B) {
 	NUM_ITERATIONS := 1000000
 	for n := 0; n < b.N; n++ {
+		// Swap for MonteCarloSquare for comparison
 		MonteCarloSquare(NUM_ITERATIONS)
 	}
 }
